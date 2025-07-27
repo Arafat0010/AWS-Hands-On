@@ -1,0 +1,8 @@
+# Ignore downloaded installers and archives
+*.zip
+awscliv2.zip
+.aws-sam/
+cdk.out/
+__pycache__/
+*.log
+.env
