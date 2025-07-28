@@ -9,6 +9,7 @@ tasks:
       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
       unzip awscliv2.zip
       sudo ./aws/install
+      code --install-extension ./extensions/redhat.vscode-yaml-1.14.0.vsix || true
   - command: |
       echo "✅ Environment ready!"
       aws --version
