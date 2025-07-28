@@ -3,6 +3,8 @@ image:
 
 tasks:
   - init: |
+      npm install -g aws-cdk
+      export PATH=$PATH:$(npm bin -g)
       echo "🔧 Installing AWS tools..."
       pip install --upgrade awscli
       npm install -g aws-cdk
