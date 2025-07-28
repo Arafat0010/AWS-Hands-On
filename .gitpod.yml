@@ -15,7 +15,7 @@ tasks:
   - command: |
       echo "✅ Environment ready!"
       aws --version
-      cdk --version
+      npx aws-cdk --version
 
 vscode:
   extensions:
