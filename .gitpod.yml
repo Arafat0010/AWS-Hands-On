@@ -19,5 +19,4 @@ vscode:
   extensions:
     - amazonwebservices.aws-toolkit-vscode
     - hashicorp.terraform
-    - redhat.vscode-yaml
     - ms-azuretools.vscode-docker
