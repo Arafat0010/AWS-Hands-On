@@ -22,3 +22,5 @@ RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /u
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
     sudo ./aws/install
+RUN code --install-extension .gitpod/extensions/redhat.vscode-yaml.vsix
+
