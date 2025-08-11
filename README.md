@@ -14,21 +14,23 @@ This repo is meant to:
 
 ## 🧱 Project Structure
 
+```
 aws-hands-on/
 ├── iam/
-│ └── create-iam-user.md
+│   └── create-iam-user.md
 ├── s3/
-│ ├── static-website-template.yaml
-│ └── upload-script.sh
+│   ├── static-website-template.yaml
+│   └── upload-script.sh
 ├── ec2/
-│ └── launch-ec2-via-cli.sh
+│   └── launch-ec2-via-cli.sh
 ├── cloudformation/
-│ └── s3-bucket-template.yaml
+│   └── s3-bucket-template.yaml
 └── lambda/
-└── hello-world-lambda.py
-
+    └── hello-world-lambda.py
+```
 
 Each folder contains a focused project or task using that AWS service.
+
 
 ---
 
