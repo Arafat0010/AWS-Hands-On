@@ -1,0 +1,20 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description: My first CloudFormation template - creates a simple S3 bucket #A simple explanation of what your template does.
+
+Resources: #This is where you define what AWS resources you want to create.
+  MyFirstBucket:
+    Type: AWS::S3::Bucket #This tells AWS you want to create an S3 bucket.
+    Properties:
+      BucketName: my-first-cloudformation-bucket-12345 #Instead of AWS giving it a random name, we specify exactly what to call our bucket.
+      AccessControl: Private #This makes sure the bucket is private (not publicly accessible)
+      VersioningConfiguration:
+        Status: Enabled #This keeps multiple versions of your files. If you accidentally delete or overwrite a file, you can get the old version back. Very useful for beginners!
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true #Blocks anyone from making files public.
+        BlockPublicPolicy: true #Blocks anyone from making the whole bucket public.
+      Tags: #These are like labels you put on your bucket.
+        - Key: Environment
+          Value: Learning #Tells you this is for learning.
+        - Key: Purpose
+          Value: My first CloudFormation template #Reminds you what this bucket is for

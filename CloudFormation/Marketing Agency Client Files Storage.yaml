@@ -1,0 +1,79 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Marketing Agency Client Files Storage - Private and Secure S3 Bucket
+
+Resources:
+  ClientFilesBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: marketing-agency-client-files-2024
+      AccessControl: Private
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      Tags:
+        - Key: Purpose
+          Value: Client Files Storage
+        - Key: Department
+          Value: Marketing
+        - Key: Environment
+          Value: Production
+
+  MarketingTeamGroup:
+    Type: AWS::IAM::Group
+    Properties:
+      GroupName: MarketingTeam-ClientFiles
+      Policies:
+        - PolicyName: ClientFilesBucketAccess
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:ListBucket
+                Resource:
+                  - !Sub "${ClientFilesBucket}/*"
+                  - !Ref ClientFilesBucket
+
+  MarketingAdminGroup:
+    Type: AWS::IAM::Group
+    Properties:
+      GroupName: MarketingAdmin-ClientFiles
+      Policies:
+        - PolicyName: ClientFilesBucketFullAccess
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:*
+                Resource:
+                  - !Sub "${ClientFilesBucket}/*"
+                  - !Ref ClientFilesBucket
+
+Outputs:
+  BucketName:
+    Description: Name of the S3 bucket for client files
+    Value: !Ref ClientFilesBucket
+
+  BucketRegion:
+    Description: AWS region where the bucket is located
+    Value: !Ref AWS::Region
+
+  TeamGroupName:
+    Description: IAM group name for regular team members
+    Value: MarketingTeam-ClientFiles
+
+  AdminGroupName:
+    Description: IAM group name for administrators
+    Value: MarketingAdmin-ClientFiles
+
+  NextSteps:
+    Description: What to do after deployment
+    Value: "1. Create IAM users, 2. Add users to appropriate groups, 3. Start organizing files by client folders"
