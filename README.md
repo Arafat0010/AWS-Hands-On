@@ -16,16 +16,16 @@ This repo is meant to:
 
 ```
 aws-hands-on/
-├── iam/
+├── IAM/
 │   └── create-iam-user.md
-├── s3/
+├── S3/
 │   ├── static-website-template.yaml
 │   └── upload-script.sh
-├── ec2/
+├── EC2/
 │   └── launch-ec2-via-cli.sh
-├── cloudformation/
+├── CloudFormation/
 │   └── s3-bucket-template.yaml
-└── lambda/
+└── Lambda/
     └── hello-world-lambda.py
 ```
 
