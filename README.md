@@ -50,11 +50,11 @@ Each folder contains a focused project or task using that AWS service.
 
 | Service         | Description                                 | Link                                  |
 |----------------|---------------------------------------------|---------------------------------------|
-| IAM             | Create user, group, role, and policies      | [`iam/create-iam-user.md`](https://github.com/Arafat0010/AWS-Hands-On/tree/main/CloudFormation)    |
-| S3              | Static site hosting, CLI bucket mgmt        | [`s3/`](./s3/)                         |
-| EC2             | Launch instance via CLI                     | [`ec2/launch-ec2-via-cli.sh`](./ec2/) |
-| CloudFormation  | YAML templates for automation               | [`cloudformation/`](./cloudformation/)|
-| Lambda          | Serverless function basics                  | [`lambda/hello-world-lambda.py`](./lambda/) |
+| IAM             | Create user, group, role, and policies      | [`iam/create-iam-user.md`](./IAM)    |
+| S3              | Static site hosting, CLI bucket mgmt        | [`s3/`](./S3/)                         |
+| EC2             | Launch instance via CLI                     | [`EC2/launch-ec2-via-cli.sh`](./ec2/) |
+| CloudFormation  | YAML templates for automation               | [`CloudFormation/`](./CloudFormation/)|
+| Lambda          | Serverless function basics                  | [`Lambda/hello-world-lambda.py`](./lambda/) |
 
 ---
 
