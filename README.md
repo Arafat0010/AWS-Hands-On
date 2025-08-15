@@ -50,7 +50,7 @@ Each folder contains a focused project or task using that AWS service.
 
 | Service         | Description                                 | Link                                  |
 |----------------|---------------------------------------------|---------------------------------------|
-| IAM             | Create user, group, role, and policies      | [`iam/create-iam-user.md`](./iam/)    |
+| IAM             | Create user, group, role, and policies      | [`iam/create-iam-user.md`](https://github.com/Arafat0010/AWS-Hands-On/tree/main/CloudFormation)    |
 | S3              | Static site hosting, CLI bucket mgmt        | [`s3/`](./s3/)                         |
 | EC2             | Launch instance via CLI                     | [`ec2/launch-ec2-via-cli.sh`](./ec2/) |
 | CloudFormation  | YAML templates for automation               | [`cloudformation/`](./cloudformation/)|
